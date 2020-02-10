@@ -43,6 +43,8 @@
 extern "C" {
 #endif
 
+uint64_t curr_time_get(void); // added by canberk
+
 /**
  * @defgroup nrf_802154_timer Low Power Timer Abstraction Layer for the 802.15.4 driver
  * @{
