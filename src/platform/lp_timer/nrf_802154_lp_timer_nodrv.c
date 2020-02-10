@@ -216,7 +216,7 @@ static uint64_t time_get(uint32_t offset, uint32_t counter)
  *
  *  @return  Current time in [us].
  */
-static uint64_t curr_time_get(void)
+uint64_t curr_time_get(void)
 {
     uint32_t offset;
     uint32_t rtc_value;

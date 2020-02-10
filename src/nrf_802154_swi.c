@@ -750,6 +750,7 @@ void SWI_IRQHandler(void)
 #else // NRF_802154_USE_RAW_API
                     nrf_802154_transmit_failed(
                         p_slot->data.transmit_failed.p_frame + RAW_PAYLOAD_OFFSET,
+                        p_slot->data.transmit_failed.p_frame[RAW_LENGTH_OFFSET],
                         p_slot->data.transmit_failed.error);
 #endif
                     break;

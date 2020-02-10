@@ -815,10 +815,11 @@ __WEAK void nrf_802154_transmitted_timestamp(const uint8_t * p_frame,
 
 #endif // NRF_802154_USE_RAW_API
 
-__WEAK void nrf_802154_transmit_failed(const uint8_t * p_frame, nrf_802154_tx_error_t error)
+__WEAK void nrf_802154_transmit_failed(const uint8_t * p_frame, uint8_t length, nrf_802154_tx_error_t error)
 {
     (void)p_frame;
     (void)error;
+    (void)length;
 }
 
 __WEAK void nrf_802154_energy_detected(uint8_t result)

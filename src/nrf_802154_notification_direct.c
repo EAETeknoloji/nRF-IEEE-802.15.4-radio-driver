@@ -85,7 +85,7 @@ void nrf_802154_notify_transmit_failed(const uint8_t * p_frame, nrf_802154_tx_er
 #if NRF_802154_USE_RAW_API
     nrf_802154_transmit_failed(p_frame, error);
 #else // NRF_802154_USE_RAW_API
-    nrf_802154_transmit_failed(p_frame + RAW_PAYLOAD_OFFSET, error);
+    nrf_802154_transmit_failed(p_frame + RAW_PAYLOAD_OFFSET, p_frame[RAW_LENGTH_OFFSET], error);
 #endif  // NRF_802154_USE_RAW_API
 }
 
