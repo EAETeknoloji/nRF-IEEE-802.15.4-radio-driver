@@ -740,16 +740,18 @@ extern void nrf_802154_transmitted_timestamp_raw(const uint8_t * p_frame,
  *       @ref nrf_802154_transmitted_raw. It should not handle both functions.
  *
  * @param[in]  p_frame  Pointer to a buffer that contains PHR and PSDU of the transmitted frame.
+ * @param[in]  length   Length of the transmitted frame
  * @param[in]  p_ack    Pointer to a buffer that contains only the received ACK payload (PSDU
  *                      excluding FCS).
  *                      If ACK was not requested, @p p_ack is set to NULL.
- * @param[in]  length   Length of the received ACK payload or 0 if ACK was not requested.
+ * @param[in]  ack_len  Length of the received ACK payload or 0 if ACK was not requested.
  * @param[in]  power    RSSI of the received frame or 0 if ACK was not requested.
  * @param[in]  lqi      LQI of the received frame or 0 if ACK was not requested.
  */
 extern void nrf_802154_transmitted(const uint8_t * p_frame,
-                                   uint8_t       * p_ack,
                                    uint8_t         length,
+                                   uint8_t       * p_ack,
+                                   uint8_t         ack_len,
                                    int8_t          power,
                                    uint8_t         lqi);
 

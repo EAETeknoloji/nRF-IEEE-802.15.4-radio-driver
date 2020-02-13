@@ -784,8 +784,9 @@ __WEAK void nrf_802154_transmitted_timestamp_raw(const uint8_t * p_frame,
 #else // NRF_802154_USE_RAW_API
 
 __WEAK void nrf_802154_transmitted(const uint8_t * p_frame,
-                                   uint8_t       * p_ack,
                                    uint8_t         length,
+                                   uint8_t       * p_ack,
+                                   uint8_t         ack_len,
                                    int8_t          power,
                                    uint8_t         lqi)
 {
